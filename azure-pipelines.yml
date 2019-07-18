@@ -20,9 +20,7 @@ steps:
     npm run build
   displayName: 'npm install and build'
 
-- task: SynopsysDetectTask@2
+- task: Bash@3
   inputs:
-    Products: 'BD'
-    BlackDuckService: 'pgreenhub'
-    DetectVersion: 'latest'
-    DetectArguments: '--detect.project.name="simple-node-js-react-npm-app" --detect.project.version.name="1"'
+    targetType: 'inline'
+    script: 'bash <(curl -s -L https://detect.synopsys.com/detect.sh) --blackduck.url=https://www.pgreenhub.co.uk --blackduck.username=sysadmin --blackduck.password=Blackduck123$ --blackduck.trust.cert=true --detect.project.name="petergreen86.simple-node-js-react-npm-app" --detect.project.version.name=master'
