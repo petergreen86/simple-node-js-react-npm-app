@@ -25,4 +25,4 @@ steps:
     Products: 'BD'
     BlackDuckService: 'pgreenhub'
     DetectVersion: 'latest'
-    DetectArguments: '--detect.project.name="simple-node-js-react-npm-app" --detect.project.version.name="1" --logging.level.com.synopsys.integration="DEBUG"'
+    DetectArguments: '--detect.project.name="simple-node-js-react-npm-app" --detect.project.version.name="1"'
